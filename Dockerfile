@@ -4,7 +4,6 @@ FROM node:20.12.2-alpine3.18 as builder
 # Set the working directory
 WORKDIR '/app'
 
-
 # Copy package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
 
@@ -28,8 +27,6 @@ RUN npm run build --prod
 # CMD ["ng", "serve"]
 
 FROM nginx:1.23-alpine
-
-
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 #this is the path where my browser is.

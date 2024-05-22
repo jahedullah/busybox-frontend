@@ -1,3 +1,18 @@
+# yml for production with nginx
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
+
+
+volumes:
+  angularngixvolume:
+
+
 # version: '3'
 # services:
 #   web:
@@ -21,17 +36,3 @@
 
 #     command: ["npm", "run", "test"]
 
-
-# yml for production with nginx
-version: '3'
-services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 4200:80
-
-
-volumes:
-  angularngixvolume:
