@@ -1,0 +1,8 @@
+<button (click)="getTasks()">Get Tasks</button>
+<button (click)="addTask()">Add Task</button>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    {{ task.id }} - {{ task.name }} - {{ task.description }} - {{ task.completed }}
+  </li>
+</ul>
