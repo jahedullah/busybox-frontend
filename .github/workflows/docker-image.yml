@@ -1,0 +1,30 @@
+name: Docker Image CI for busybox frontend
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+
+  build-image-and-push-to-registry:
+    name: Build the docker image
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker compose build
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+    - name: List all Docker images
+      run: docker images
+      
+    - name: Push the image to docker hub
+      run: docker push jahedulislam/busybox-frontend-amd64:1.0
