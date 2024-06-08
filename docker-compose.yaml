@@ -1,7 +1,7 @@
 # yml for production with nginx
 version: '3'
 services:
-  web:
+  busybox-frontend:
     build:
       context: .
       dockerfile: Dockerfile
