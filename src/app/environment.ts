@@ -9,4 +9,4 @@ export const apiPath = '/busyBox/api/v1';
 
 
 // export const originalUrl = protocol + host + ':' + nodePort + apiPath;
-export const originalUrl = protocol + serviceName + ':' + targetPort + apiPath;
+export const originalUrl = protocol + serviceName + apiPath;
