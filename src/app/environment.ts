@@ -1,5 +1,5 @@
 export const protocol = 'http://';
-export const busyBoxHost = 'busyBox.local';
+export const busyBoxHost = 'busybox.local';
 export const localhost = 'localhost';
 export const targetPort = '8080';
 export const host = '192.168.64.3';
