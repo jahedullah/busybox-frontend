@@ -10,4 +10,4 @@ export const apiPath = '/busybox/api/v1';
 
 // export const originalUrl = protocol + host + ':' + nodePort + apiPath;
 // export const originalUrl = protocol + serviceName + apiPath;
-export const originalUrl = "http://busybox-backend-service.default.svc.cluster.local:8080/busybox/api/v1";
+export const originalUrl = "http://localhost:8080/busybox/api/v1";
